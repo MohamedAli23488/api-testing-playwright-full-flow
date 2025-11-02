@@ -51,14 +51,18 @@ export async function getOrderById(
   )
 }
 
-export async function deleteOrder(request: APIRequestContext, jwt: string, orderId:number): Promise<void> {
+export async function deleteOrder(
+  request: APIRequestContext,
+  jwt: string,
+  orderId: number,
+): Promise<void> {
   const response = await request.delete(`${serviceURL}${orderPath}/${orderId}`, {
-       headers: {
+    headers: {
       Authorization: `Bearer ${jwt}`,
     },
   })
   expect(response.status()).toBe(StatusCodes.OK)
-  }
+}
 
 export async function getdeletedOrderById(
   request: APIRequestContext,

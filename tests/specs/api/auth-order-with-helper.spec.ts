@@ -33,5 +33,4 @@ test('create order and Delete order by id and get deleted order', async ({ reque
   console.log(orderId)
   await deleteOrder(request, jwt, orderId)
   await getdeletedOrderById(request, jwt, orderId)
-
 })
