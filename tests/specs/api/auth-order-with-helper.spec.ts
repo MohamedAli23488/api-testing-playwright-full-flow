@@ -34,3 +34,10 @@ test('create order and Delete order by id and get deleted order', async ({ reque
   await deleteOrder(request, jwt, orderId)
   await getdeletedOrderById(request, jwt, orderId)
 })
+
+test('create order2 and Delete order2 by id and get deleted order', async ({ request }) => {
+  const orderId = await createOrder(request, jwt)
+  console.log(orderId)
+  await deleteOrder(request, jwt, orderId)
+  await getdeletedOrderById(request, jwt, orderId)
+})
