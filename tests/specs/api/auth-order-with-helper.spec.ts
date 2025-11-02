@@ -15,7 +15,7 @@ test.beforeAll(async ({ request }) => {
   jwt = await fetchJwt(request)
 })
 
-test('login and create order with api-helper', async ({ request }) => {
+test('login student and create order with api-helper', async ({ request }) => {
   const orderId = await createOrder(request, jwt)
   expect.soft(orderId).toBeGreaterThan(0)
 })

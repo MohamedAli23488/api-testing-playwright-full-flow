@@ -1,4 +1,4 @@
-name: Check formatting, linting, and run tests
+name: Check formatting, linting, and run tests1
 
 on:
   push:

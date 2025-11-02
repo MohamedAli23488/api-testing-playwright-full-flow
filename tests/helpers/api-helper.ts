@@ -25,8 +25,8 @@ export async function createOrder(request: APIRequestContext, jwt: string): Prom
     },
   })
   expect(response.status()).toBe(StatusCodes.OK)
-  const responseBody = await response.json()
-  return responseBody.id
+  const responseBody1 = await response.json()
+  return responseBody1.id
 }
 
 export async function getOrderById(
@@ -40,14 +40,14 @@ export async function getOrderById(
     },
   })
   expect(response.status()).toBe(StatusCodes.OK)
-  const data = await response.json()
+  const data1 = await response.json()
   return new OrderDto(
-    data.status,
-    data.courierId,
-    data.customerName,
-    data.customerPhone,
-    data.comment,
-    data.id,
+    data1.status,
+    data1.courierId,
+    data1.customerName,
+    data1.customerPhone,
+    data1.comment,
+    data1.id,
   )
 }
 
